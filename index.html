@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
 <body>
@@ -14,9 +14,9 @@
         <div class="container flex-between-center">
             <a id="brand-logo" href="#">Acacius</a>
             <ul>
-                <li><a class="btn nav-active" href="#">Home</a></li>
-                <li><a class="btn" href="#">About</a></li>
-                <li><a class="btn call-to-action corner-pill" href="#">Contact</a></li>
+                <li><button data-nav="home" class=" nav-active">Home</button></li>
+                <li><button data-nav="about" class="">About</button></li>
+                <li><button data-nav="contact" class="call-to-action corner-pill">Contact</button></li>
             </ul>
             <label id="mobile-nav-toggle" for="toggle-nav">
                 <input id="toggle-nav" type="checkbox" />
@@ -25,53 +25,58 @@
     </nav>
     <nav id="mobile-main-nav">
         <ul>
-            <li><a class="btn nav-active" href="#">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Home</span>
-                </a>
+            <li>
+                <button data-nav="home" class="nav-active">Home</button>
             </li>
-            <li><a class="btn" href="#">
-                    <i class="fa-solid fa-circle-info"></i>
-                    <span>About</span>
-                </a></li>
-            <li><a class="btn call-to-action" href="#">
-                    <i class="fa-regular fa-circle-user"></i>
-                    <span> Contact</span>
-                </a></li>
+            <li>
+                <button data-nav="about">About</button>
+            </li>
+            <li>
+                <button data-nav="contact" class="call-to-action">Contact</button>
+            </li>
         </ul>
     </nav>
-    <header id="hero">
-        <img src="pexels-kevin-ku-577585.jpg" alt="personal blog" width="400px" height="300px">
-        <hgroup>
-            <h1>code:life</h1>
-            <p>Indulging lifelong pursuance to success</p>
-        </hgroup>
-    </header>
-    <section id="featured-blogs">
-        <div class="container">
-            <h2 class="section-title">Featured Blogs</h2>
-            <div class="wrapper blogs-container"></div>
-        </div>
-    </section>
-    <div class="container col-2">
-        <section id="other-blogs">
-            <h2 class="section-title">Other Blogs</h2>
-            <div class="wrapper blogs-container"></div>
-        </section>
-        <aside class="rounded-corner">
-            <div class="profile-photo">
-                <img class="floating-img" src="img/erik-lucatero-d2MSDujJl2g-unsplash.jpg" alt="profile-photo">
+    <div id="app">
+        <header id="hero">
+            <img src="https://picsum.photos/1440/700" alt="personal blog" width="400px" height="300px">
+            <hgroup>
+                <h1>code:life</h1>
+                <p>Indulging lifelong pursuance to success</p>
+            </hgroup>
+        </header>
+        <section id="featured-blogs">
+            <div class="container">
+                <h2 class="section-title">Featured Blogs</h2>
+                <div class="wrapper blogs-container"></div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, ipsam laborum aperiam ut quia
-                doloribus ullam enim repudiandae quasi provident perferendis a. Placeat id accusantium porro
-                debitis,
-                aut sed iste iure ipsam magnam inventore voluptatibus neque nam consectetur praesentium voluptas
-                unde?
-                Officiis dolor adipisci, animi ducimus reprehenderit temporibus porro in.
-            </p>
-        </aside>
+        </section>
+
+        <div class="container col-2">
+            <section id="other-blogs">
+                <h2 class="section-title">Other Blogs</h2>
+                <div class="blogs-container"></div>
+            </section>
+            <aside class="rounded-corner">
+                <div class="profile-photo">
+                    <img class="floating-img" src="img/erik-lucatero-d2MSDujJl2g-unsplash.jpg" alt="profile-photo">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, ipsam laborum aperiam ut quia
+                    doloribus ullam enim repudiandae quasi provident perferendis a. Placeat id accusantium porro
+                    debitis,
+                    aut sed iste iure ipsam magnam inventore voluptatibus neque nam consectetur praesentium voluptas
+                    unde?
+                    Officiis dolor adipisci, animi ducimus reprehenderit temporibus porro in.
+                </p>
+            </aside>
+        </div>
     </div>
-    <section id="newsletter">
+
+
+
+
+
+
+    <!-- <section id="newsletter">
         <div class="container">
             <h3>Subscribe to my Newsletter</h3>
             <form>
@@ -90,8 +95,9 @@
                 <a href="#">Sitemap</a>
             </nav>
         </div>
-    </footer>
-    <script src="app.js"></script>
+    </footer> -->
+    <script src="blog-post.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 @import url(sections/aside.css);
 @import url(sections/newsletter.css);
 @import url(sections/footer.css);
+@import url(about.css);
 /* Underline Anim */
 .underline {
 	position: relative;
@@ -23,6 +24,6 @@
 .nav-active::before {
 	width: 110%;
 }
-nav a.nav-active {
+nav .nav-active {
 	color: var(--color-secondary);
 }

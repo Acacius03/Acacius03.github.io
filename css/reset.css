@@ -57,9 +57,16 @@ body {
 }
 button,
 .btn {
+	background-color: inherit;
 	font-size: var(--font-secondary);
 	padding: var(--btn-padding);
 	line-height: 1;
+	transition: 300ms ease-in-out;
+}
+button:active,
+.btn:active,
+.call-to-action:active {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 h1,
 h2,
@@ -86,6 +93,7 @@ button.call-to-action {
 .container {
 	width: min(85%, 1200px);
 	margin-inline: auto;
+	overflow: hidden;
 }
 .flex-between-center {
 	display: flex;
@@ -96,4 +104,25 @@ button.call-to-action {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--gap-half);
+}
+.light {
+	background: var(--color-neutral);
+	color: var(--color-dark);
+	padding: var(--gap-half);
+}
+@media screen and (max-width: 500px) {
+	:root {
+		/* Font Sizes */
+		--font-heading: 20px;
+		--font-primary: 16px;
+		--font-secondary: 14px;
+		--font-tertiary: 13px;
+	}
+	.container {
+		width: 90%;
+	}
+	html,
+	body {
+		width: 100%;
+	}
 }
