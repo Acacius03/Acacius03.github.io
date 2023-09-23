@@ -1,0 +1,11 @@
+/* aside {
+	grid-column: 1/13;
+	margin-top: calc(var(--gap) * 2);
+	height: max-content;
+	padding-inline: var(--gap-half);
+}
+@media screen and (min-width: 901px) {
+	aside {
+		grid-column: 9/13;
+	}
+} */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <nav id="main-nav">
+        <div class="container flex-between-center">
+            <a id="brand-logo" href="#">Acacius</a>
+            <ul>
+                <li><button data-nav="home" class=" nav-active">Home</button></li>
+                <li><button data-nav="about" class="">About</button></li>
+                <li><button data-nav="contact" class="call-to-action corner-pill">Contact</button></li>
+            </ul>
+            <label id="mobile-nav-toggle" for="toggle-nav">
+                <input id="toggle-nav" type="checkbox" />
+            </label>
+        </div>
+    </nav>
+    <nav id="mobile-main-nav">
+        <ul>
+            <li>
+                <button data-nav="home" class="nav-active">Home</button>
+            </li>
+            <li>
+                <button data-nav="about">About</button>
+            </li>
+            <li>
+                <button data-nav="contact" class="call-to-action">Contact</button>
+            </li>
+        </ul>
+    </nav>
+    <div id="app">
+        <header id="hero">
+            <img src="https://picsum.photos/1440/700" alt="personal blog" width="400px" height="300px">
+            <hgroup>
+                <h1>code:life</h1>
+                <p>Indulging lifelong pursuance to success</p>
+            </hgroup>
+        </header>
+        <section id="featured-blogs">
+            <div class="container">
+                <h2 class="section-title">Featured Blogs</h2>
+                <div class="wrapper blogs-container"></div>
+            </div>
+        </section>
+
+        <div class="container col-2">
+            <section id="other-blogs">
+                <h2 class="section-title">Other Blogs</h2>
+                <div class="blogs-container"></div>
+            </section>
+            <aside class="rounded-corner">
+                <div class="profile-photo">
+                    <img class="floating-img" src="img/erik-lucatero-d2MSDujJl2g-unsplash.jpg" alt="profile-photo">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, ipsam laborum aperiam ut quia
+                    doloribus ullam enim repudiandae quasi provident perferendis a. Placeat id accusantium porro
+                    debitis,
+                    aut sed iste iure ipsam magnam inventore voluptatibus neque nam consectetur praesentium voluptas
+                    unde?
+                    Officiis dolor adipisci, animi ducimus reprehenderit temporibus porro in.
+                </p>
+            </aside>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <section id="newsletter">
+        <div class="container">
+            <h3>Subscribe to my Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="call-to-action">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <footer id="main-footer">
+        <div class="container">
+            <p>&copy; 2023 My Blog Site. All Rights Reserved.</p>
+            <nav>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Accesibility</a>
+                <a href="#">Sitemap</a>
+            </nav>
+        </div>
+    </footer> -->
+    <script src="blog-post.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
