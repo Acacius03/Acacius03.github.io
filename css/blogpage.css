@@ -1,0 +1,5 @@
+#blog-page .container {
+	position: relative;
+	translate: 0 -100px;
+	z-index: 2;
+}
