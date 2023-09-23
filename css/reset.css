@@ -121,8 +121,4 @@ button.call-to-action {
 	.container {
 		width: 90%;
 	}
-	html,
-	body {
-		width: 100%;
-	}
 }

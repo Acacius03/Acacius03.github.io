@@ -1,7 +1,6 @@
-const navButtons = document.querySelectorAll('[data-nav]');
 const pageLoader = document.querySelector('#app');
-
-const pages = {
+const navButtons = document.querySelectorAll('[data-nav]');
+const template = {
 	home: pageLoader.innerHTML,
 	about: `<header id="hero">
             <img src="https://picsum.photos/1440/700" alt="personal blog" width="400px" height="300px">
@@ -69,10 +68,30 @@ const pages = {
 };
 navButtons.forEach(btn => {
 	btn.addEventListener('click', e => {
+		navButtons.forEach(btn => {
+			btn.classList.remove('nav-active');
+			if (
+				btn.getAttribute('data-nav') ===
+				e.target.getAttribute('data-nav')
+			) {
+				btn.classList.add('nav-active');
+			}
+		});
 		switchPage(e.target.getAttribute('data-nav'));
 	});
 });
 
-function switchPage(page) {
-	pageLoader.innerHTML = pages[page];
+function switchPage(page, blog_template = '') {
+	if (page === 'blog_page' && blog_template !== '') {
+		pageLoader.innerHTML = blog_template;
+	} else if (page == 'home') {
+		pageLoader.innerHTML = template[page];
+		document.querySelectorAll('[data-blog-id]').forEach(btn => {
+			btn.addEventListener('click', e => {
+				openBlogPage(e.target.getAttribute('data-blog-id'));
+			});
+		});
+	} else {
+		pageLoader.innerHTML = template[page];
+	}
 }

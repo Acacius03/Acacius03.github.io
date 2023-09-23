@@ -82,6 +82,11 @@
 body:has(#toggle-nav:checked) #mobile-main-nav {
 	translate: 0 var(--max-navbar-height);
 }
+/* Navigation Buttons */
+nav button.call-to-action.nav-active {
+	background-color: var(--color-secondary);
+	color: var(--color-neutral);
+}
 @media screen and (min-width: 600px) {
 	#main-nav ul {
 		display: flex;
