@@ -1,0 +1,93 @@
+#main-nav {
+	background-color: var(--color-dark);
+	position: sticky;
+	z-index: 100;
+	top: 0;
+	box-shadow: 0 0 1px 0 var(--color-grey);
+	/* border-bottom: 1px solid var(--color-grey); */
+}
+#main-nav > .container {
+	padding-block: 20px;
+	height: var(--max-navbar-height);
+}
+#brand-logo {
+	font-size: 40px;
+}
+#main-nav ul {
+	display: none;
+	gap: var(--gap-third);
+	text-transform: uppercase;
+}
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+	--bar-height: 5px;
+	--bar-width: calc(var(--bar-height) * 6);
+	--hamburger-height: calc(var(--bar-height) * 3 + (var(--bar-height) * 2));
+	--x-width: calc(var(--hamburger-height) * 1.41421356237);
+	--right-angle: 45deg;
+	cursor: pointer;
+}
+#toggle-nav {
+	appearance: none;
+	outline: none;
+	pointer-events: none;
+}
+#mobile-nav-toggle::before,
+#mobile-nav-toggle::after,
+#toggle-nav {
+	content: '';
+	display: block;
+	width: var(--bar-width);
+	height: var(--bar-height);
+	margin-block: var(--bar-height);
+	background: var(--color-neutral);
+	transform-origin: right;
+	transition: 500ms ease-in-out;
+}
+#toggle-nav:checked {
+	scale: 0;
+}
+#mobile-nav-toggle:has(#toggle-nav:checked)::before {
+	rotate: calc(var(--right-angle) * -1);
+	width: var(--x-width);
+	translate: 0 calc(var(--bar-height) / -2);
+}
+#mobile-nav-toggle:has(#toggle-nav:checked)::after {
+	rotate: var(--right-angle);
+	width: var(--x-width);
+	translate: 0 calc(var(--bar-height) / 2);
+}
+/* Mobile Nav */
+#mobile-main-nav {
+	font-family: monospace, Helvetica, sans-serif;
+	background-color: var(--color-dark);
+	border-radius: 0 0 var(--corner-round) var(--corner-round);
+
+	position: fixed;
+	z-index: 99;
+	right: 0;
+	top: 0;
+	translate: 0 -100%;
+
+	overflow: hidden;
+	transition: 500ms translate ease-out;
+}
+#mobile-main-nav a {
+	height: var(--max-navbar-height);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+body:has(#toggle-nav:checked) #mobile-main-nav {
+	translate: 0 var(--max-navbar-height);
+}
+@media screen and (min-width: 600px) {
+	#main-nav ul {
+		display: flex;
+	}
+	#mobile-nav-toggle,
+	#mobile-main-nav {
+		display: none;
+	}
+}
