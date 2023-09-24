@@ -1,5 +1,34 @@
-#blog-page .container {
+#blog .container {
 	position: relative;
-	translate: 0 -100px;
+	translate: 0 -150px;
 	z-index: 2;
+	padding: var(--gap);
 }
+#blog-header {
+	padding-bottom: var(--gap);
+	margin-bottom: var(--gap);
+	border-bottom: 1px solid var(--color-grey);
+}
+#blog-header h1 {
+	font-size: calc(var(--font-heading) * 2);
+}
+#blog-header small {
+	color: var(--color-grey);
+}
+
+#blog-context h1,
+#blog-context h2,
+#blog-context h3,
+#blog-context h4,
+#blog-context h5,
+#blog-context h6 {
+	margin-top: 1.5em;
+	padding-block: var(--gap-third);
+}
+/* #blog-context h2,
+#blog-context h3,
+#blog-context h4,
+#blog-context h5,
+#blog-context h6 {
+	font-size: var(--font-primary);
+} */

@@ -57,6 +57,10 @@ function switchPage(page, blogPage) {
 	} else {
 		pageLoader.innerHTML = AboutPage;
 	}
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
 }
 function generatePost() {
 	let i = 0;

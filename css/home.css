@@ -113,6 +113,10 @@ aside {
 	flex-basis: 100%;
 	display: none;
 }
+aside#blog-topics .wrapper {
+	padding: var(--gap-third) var(--gap-sixth);
+	gap: var(--gap-sixth);
+}
 @media screen and (min-width: 350px) {
 	#other-blogs .blog-post h2 {
 		font-size: var(--font-heading);
@@ -152,6 +156,7 @@ aside {
 		justify-content: space-between;
 		align-items: start;
 		gap: var(--gap);
+		overflow: visible;
 	}
 	#other-blogs {
 		flex-basis: 60%;
@@ -160,5 +165,7 @@ aside {
 	#blog-topics {
 		flex-basis: 30%;
 		flex-grow: 1;
+		position: sticky;
+		top: var(--max-navbar-height);
 	}
 }
