@@ -1,3 +1,6 @@
+#about {
+	padding-block: var(--gap);
+}
 #about p {
 	text-indent: 40px;
 	padding-block: var(--gap-half);
