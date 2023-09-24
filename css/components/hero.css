@@ -1,0 +1,42 @@
+#hero {
+	height: clamp(300px, calc(200px + 35vw), 700px);
+	position: relative;
+}
+#hero::after {
+	content: '';
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.1),
+		rgba(0, 0, 0, 1)
+	);
+	position: absolute;
+	z-index: 1;
+	inset: 0;
+}
+#hero hgroup {
+	font-family: monospace;
+	line-height: 1;
+	text-align: center;
+	text-transform: lowercase;
+
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+#hero hgroup h1 {
+	color: var(--color-primary);
+	text-shadow: 0 0 10px var(--color-dark);
+	font-size: clamp(2em, calc(1.75em + 8vw), 7em);
+}
+#hero hgroup p {
+	margin-top: 5px;
+	font-size: clamp(0.95rem, 2vw, 1.5rem);
+}
+#hero hgroup p::before {
+	content: '< ';
+}
+#hero hgroup p::after {
+	content: ' />';
+}

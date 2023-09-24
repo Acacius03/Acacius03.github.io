@@ -1,0 +1,10 @@
+#main-footer {
+	font-size: 1.3em;
+	padding-block: var(--gap);
+	text-align: center;
+}
+#main-footer nav a:not(:first-of-type):before {
+	content: ' | ';
+	font-size: 1.4em;
+	margin: 10px;
+}

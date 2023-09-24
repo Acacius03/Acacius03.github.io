@@ -12,11 +12,13 @@
 <body>
     <nav id="main-nav">
         <div class="container flex-between-center">
-            <a id="brand-logo" data-nav="home" href="#">Acacius</a>
+            <button id="brand-logo">
+                <img src="logo.png" data-nav="home">
+            </button>
             <ul>
-                <li><button data-nav="home" class="corner-pill nav-active">Home</button></li>
-                <li><button data-nav="about" class="corner-pill">About</button></li>
-                <li><button data-nav="contact" class="call-to-action corner-pill">Contact</button></li>
+                <li><button class="nav-active" data-nav="home">Home</button></li>
+                <li><button data-nav="about">About</button></li>
+                <li><button data-nav="contact" class="call-to-action">Contact</button></li>
             </ul>
             <label id="mobile-nav-toggle" for="toggle-nav">
                 <input id="toggle-nav" type="checkbox" />
@@ -36,10 +38,7 @@
             </li>
         </ul>
     </nav>
-    <div id="app">
-
-    </div>
-    <script src="js/blogPostCard.js"></script>
+    <div id="app"></div>
     <script type="module" src="js/script.js"></script>
 </body>
 

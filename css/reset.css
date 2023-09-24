@@ -45,11 +45,6 @@ img {
 	width: 100%;
 	height: 100%;
 }
-i {
-	text-align: center;
-	line-height: var(--floating-icon-gap);
-	width: var(--floating-icon-gap);
-}
 body {
 	font: var(--font-primary) / 1.5 Helvetica, sans-serif;
 	color: var(--color-neutral);

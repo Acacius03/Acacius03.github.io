@@ -32,6 +32,16 @@ button.call-to-action {
 	color: var(--color-dark);
 	padding: var(--gap-half);
 }
+.truncate {
+	--max-lines: 2;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--max-lines);
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.section-title {
+	margin-bottom: var(--gap-half);
+}
 @media screen and (max-width: 500px) {
 	.container {
 		width: 90%;

@@ -1,0 +1,30 @@
+#about {
+	padding-block: var(--gap);
+}
+#about p {
+	text-indent: 40px;
+	padding-block: var(--gap-half);
+}
+#about .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	gap: var(--gap);
+}
+#about article {
+	flex-basis: 60%;
+}
+#about aside {
+	flex-basis: 30%;
+	flex-grow: 1;
+	padding-block: var(--gap);
+	margin-top: var(--gap-third);
+}
+@media screen and (max-width: 768px) {
+	#about .container {
+		display: block;
+	}
+	section#about .container > * > *:first-child {
+		text-align: center;
+	}
+}
