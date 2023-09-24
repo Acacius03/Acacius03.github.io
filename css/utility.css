@@ -1,0 +1,39 @@
+a.call-to-action,
+button.call-to-action {
+	background-color: var(--color-primary);
+	color: var(--color-neutral);
+}
+.primary {
+	color: var(--color-primary);
+}
+.corner-round {
+	border-radius: var(--corner-round);
+}
+.corner-pill {
+	border-radius: var(--round);
+}
+.container {
+	width: min(85%, 1200px);
+	margin-inline: auto;
+	overflow: hidden;
+}
+.flex-between-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap-half);
+}
+.light {
+	background: var(--color-neutral);
+	color: var(--color-dark);
+	padding: var(--gap-half);
+}
+@media screen and (max-width: 500px) {
+	.container {
+		width: 90%;
+	}
+}

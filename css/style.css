@@ -1,10 +1,11 @@
 @import url(reset.css);
+@import url(utility.css);
 @import url(navbar.css);
-@import url(sections/hero.css);
-@import url(sections/blog.css);
-@import url(sections/aside.css);
-@import url(sections/newsletter.css);
-@import url(sections/footer.css);
+@import url(hero.css);
+@import url(aside.css);
+@import url(newsletter.css);
+@import url(footer.css);
+@import url(home.css);
 @import url(about.css);
 @import url(blogpage.css);
 /* Underline Anim */
@@ -25,6 +26,6 @@
 .nav-active::before {
 	width: 110%;
 }
-nav .nav-active {
+nav button.nav-active {
 	color: var(--color-secondary);
 }

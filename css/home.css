@@ -79,7 +79,6 @@ aside {
 	display: block;
 	text-align: center;
 }
-
 /* Other Blogs */
 #other-blogs .blog-post h2 {
 	font-size: var(--font-primary);
@@ -113,11 +112,6 @@ aside {
 #other-blogs a.blog-btn {
 	flex-basis: 100%;
 	display: none;
-}
-@media screen and (min-width: 1001px) {
-	#other-blogs {
-		grid-column: 1/9;
-	}
 }
 @media screen and (min-width: 350px) {
 	#other-blogs .blog-post h2 {
