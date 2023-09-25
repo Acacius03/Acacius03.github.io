@@ -56,6 +56,7 @@ button,
 	font-size: var(--font-secondary);
 	padding: var(--btn-padding);
 	line-height: 1em;
+	cursor: pointer;
 	transition: 300ms background-color ease-in-out;
 }
 button:active,

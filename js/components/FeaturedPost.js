@@ -5,7 +5,7 @@ export const FeaturedPost = post => {
 		<figure class="blog-cover">
 			<img src="${post.photo_url}" alt="${post.title}">
 			<figcaption class="blog-header">
-				<h2 class="blog-title primary truncate">${post.title}</h2>
+				<h2 class="blog-title primary truncate" data-blog-id=${post.blog_id}>${post.title}</h2>
 				<small class="blog-post-date truncate">${post.created_at}</small>
 			</figcaption>
 		</figure>
@@ -16,7 +16,7 @@ export const FeaturedPost = post => {
 					<i class="fa-regular fa-heart"></i>
 				</button>
 			</div>
-			<summary class="truncate">${post.description}</summary>
+			<summary class="truncate" data-blog-id=${post.blog_id}>${post.description}</summary>
 		</section>
 		<button class="call-to-action read-more" data-blog-id=${post.blog_id}>READ MORE</button>`;
 	return blogPost;

@@ -5,7 +5,7 @@ import { FeaturedPost } from './components/FeaturedPost.js';
 
 const navButtons = document.querySelectorAll('[data-nav]');
 const pageLoader = document.querySelector('#app');
-let FeaturedblogsArea, OtherblogsArea;
+let FeaturedblogsArea, OtherblogsArea, favBtns;
 
 function createBlogPage(id) {
 	blogPostData.forEach(post => {
@@ -46,6 +46,20 @@ function Home() {
 	document.querySelectorAll('[data-blog-id]').forEach(btn => {
 		btn.addEventListener('click', e => {
 			createBlogPage(e.target.getAttribute('data-blog-id'));
+		});
+	});
+	favBtns = document.querySelectorAll('[data-blog-favorite]');
+	favBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const icon = btn.querySelector('i');
+			icon.classList.toggle('fa-regular');
+			icon.classList.toggle('fa-solid');
+			const state =
+				btn.getAttribute('data-blog-favorite') === 'false'
+					? 'true'
+					: 'false';
+			btn.setAttribute('data-blog-favorite', state);
+			console.log(state);
 		});
 	});
 }
