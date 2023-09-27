@@ -2,11 +2,13 @@ import { blogPostData } from './blogPostData.js';
 import { HomePage, AboutPage, BlogPage } from './Layout.js';
 import { BlogPost } from './components/BlogPost.js';
 import { FeaturedPost } from './components/FeaturedPost.js';
-
+// Variable Declaration
+const navbar = document.querySelector('#main-nav');
 const navButtons = document.querySelectorAll('[data-nav]');
 const pageLoader = document.querySelector('#app');
-let FeaturedblogsArea, OtherblogsArea, favBtns;
-
+let Featured, Other, favBtns;
+let scrollVal = 0;
+// Function Declaration
 function createBlogPage(id) {
 	blogPostData.forEach(post => {
 		if (post.blog_id == id) {
@@ -30,22 +32,25 @@ function switchPage(page, blogPage) {
 function generatePost() {
 	blogPostData.forEach((post, index) => {
 		if (index < 6) {
-			FeaturedblogsArea.appendChild(FeaturedPost(post));
+			Featured.appendChild(FeaturedPost(post));
 		} else {
-			OtherblogsArea.appendChild(BlogPost(post));
+			Other.appendChild(BlogPost(post));
 		}
 	});
 }
 function Home() {
 	pageLoader.innerHTML = HomePage;
-	FeaturedblogsArea = document.querySelector(
-		'#featured-blogs .blogs-container'
-	);
-	OtherblogsArea = document.querySelector('#other-blogs .blogs-container');
+	Featured = document.querySelector('#featured-blogs .blogs-container');
+	Other = document.querySelector('#other-blogs .blogs-container');
 	generatePost();
 	document.querySelectorAll('[data-blog-id]').forEach(btn => {
 		btn.addEventListener('click', e => {
 			createBlogPage(e.target.getAttribute('data-blog-id'));
+		});
+	});
+	document.querySelectorAll('[data-blog-filter]').forEach(btn => {
+		btn.addEventListener('click', () => {
+			filterBlogs(btn.innerText);
 		});
 	});
 	favBtns = document.querySelectorAll('[data-blog-favorite]');
@@ -59,11 +64,26 @@ function Home() {
 					? 'true'
 					: 'false';
 			btn.setAttribute('data-blog-favorite', state);
-			console.log(state);
 		});
 	});
 }
-
+function filterBlogs(category) {
+	Other.querySelectorAll('article').forEach(blog => {
+		if (category === blog.querySelector('[data-blog-filter]').innerText) {
+			blog.style.display = 'flex';
+		} else {
+			blog.style.display = 'none';
+		}
+	});
+}
+window.addEventListener('scroll', () => {
+	if (window.scrollY > scrollVal) {
+		navbar.classList.add('hide');
+	} else {
+		navbar.classList.remove('hide');
+	}
+	scrollVal = window.scrollY;
+});
 navButtons.forEach(btn => {
 	btn.addEventListener('click', e => {
 		navButtons.forEach(btn => {

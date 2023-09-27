@@ -1,5 +1,6 @@
 export const FeaturedPost = post => {
 	let blogPost = document.createElement('article');
+	blogPost.classList.add('post');
 	blogPost.classList.add('featured-post');
 	blogPost.innerHTML = `
 		<figure class="blog-cover">
@@ -11,12 +12,12 @@ export const FeaturedPost = post => {
 		</figure>
 		<section class="blog-context">
 			<div class="blog-tool flex-between-center">
-				<button class="blog-category blog-btn">${post.category}</button>
+				<button class="blog-category blog-btn" data-blog-filter>${post.category}</button>
 				<button class="blog-btn" data-blog-favorite="false">
 					<i class="fa-regular fa-heart"></i>
 				</button>
 			</div>
-			<summary class="truncate" data-blog-id=${post.blog_id}>${post.description}</summary>
+			<summary class="truncate">${post.description}</summary>
 		</section>
 		<button class="call-to-action read-more" data-blog-id=${post.blog_id}>READ MORE</button>`;
 	return blogPost;

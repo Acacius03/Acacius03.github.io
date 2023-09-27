@@ -1,3 +1,6 @@
+@import url(../components/hero.css);
+@import url(../components/newsletter.css);
+@import url(../components/footer.css);
 #about {
 	padding-block: var(--gap);
 }

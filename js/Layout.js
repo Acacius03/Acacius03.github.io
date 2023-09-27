@@ -16,10 +16,10 @@ export const HomePage = `
     <aside id="blog-topics">
         <h2>Pick a topic</h2>
         <div class="wrapper">
-            <small class="blog-category">programming</small>
-            <small class="blog-category">gaming</small>
-            <small class="blog-category">math</small>
-            <small class="blog-category">love</small>
+            <button class="blog-category corner-pill" data-blog-filter>programming</button>
+            <button class="blog-category corner-pill" data-blog-filter>gaming</button>
+            <button class="blog-category corner-pill" data-blog-filter>math</button>
+            <button class="blog-category corner-pill" data-blog-filter>love</button>
         </div>
     </aside>
     <section id="other-blogs">

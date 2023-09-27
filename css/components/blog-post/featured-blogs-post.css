@@ -1,0 +1,35 @@
+#featured-blogs .post {
+	--max-img-height: 250px;
+	flex: 1 1 300px;
+	flex-direction: column;
+}
+#featured-blogs .post figure {
+	height: clamp(200px, calc(150px + 15vw), var(--max-img-height));
+	position: relative;
+}
+#featured-blogs .post figure::after {
+	content: '';
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+	position: absolute;
+	inset: 0;
+}
+#featured-blogs .post figcaption {
+	text-transform: capitalize;
+	padding-inline: var(--gap-half);
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+}
+#featured-blogs .post .blog-tool {
+	padding-block: var(--gap-third);
+	padding-inline: var(--gap-half);
+	border-bottom: 1px solid var(--color-grey);
+}
+#featured-blogs .post summary {
+	margin-block: var(--gap-sixth);
+	padding-inline: var(--gap);
+}
+#featured-blogs .post .read-more {
+	font-weight: 700;
+	margin-top: auto;
+}

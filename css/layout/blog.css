@@ -1,6 +1,16 @@
-#blog .container {
+@import url(../components/hero.css);
+@import url(../components/footer.css);
+#blog {
 	position: relative;
-	translate: 0 -150px;
+}
+#blog #hero {
+	height: 100vh;
+}
+#blog .container {
+	position: absolute;
+	top: 65vh;
+	left: 50%;
+	translate: -50% 0;
 	z-index: 2;
 	padding: var(--gap);
 }
