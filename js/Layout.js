@@ -16,11 +16,10 @@ export const HomePage = `
     <aside id="blog-topics">
         <h2>Pick a topic</h2>
         <div class="wrapper">
-            <button class="blog-category corner-pill" data-blog-filter>programming</button>
-            <button class="blog-category corner-pill" data-blog-filter>gaming</button>
-            <button class="blog-category corner-pill" data-blog-filter>math</button>
-            <button class="blog-category corner-pill" data-blog-filter>love</button>
         </div>
+        <footer id="main-footer">
+            <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
+        </footer>
     </aside>
     <section id="other-blogs">
         <h2 class="section-title">Other Blogs</h2>
@@ -83,13 +82,13 @@ export const AboutPage = `
         <h3>Subscribe to my Newsletter</h3>
         <form>
             <input type="email" placeholder="Enter Email...">
-            <button type="submit" class="call-to-action">Subscribe</button>
+            <button type="submit" class="cta">Subscribe</button>
         </form>
     </div>
 </section>
 <footer id="main-footer">
     <div class="container">
-        <p>&copy; 2023 Acacius03. All Rights Reserved.</p>
+        <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
     </div>
 </footer>
 `;
@@ -106,6 +105,9 @@ export const BlogPage = post => `
             <small>${post.created_at}</small>
         </header>
         <section id="blog-context">${post.content_html}</section>
+        <footer id="blog-footer">
+            <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
+        </footer>
     </div>
 </Article>
 `;

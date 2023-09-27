@@ -1,17 +1,4 @@
-a.call-to-action,
-button.call-to-action {
-	background-color: var(--color-primary);
-	color: var(--color-neutral);
-}
-.primary {
-	color: var(--color-primary);
-}
-.corner-round {
-	border-radius: var(--corner-round);
-}
-.corner-pill {
-	border-radius: var(--round);
-}
+/* CONTAINER BEHAVIORS*/
 .container {
 	width: min(85%, 1200px);
 	margin-inline: auto;
@@ -39,9 +26,35 @@ button.call-to-action {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
+/* INTERACTIVES */
+.cta {
+	background-color: var(--color-primary);
+	color: var(--color-neutral);
+	transition: 300ms ease;
+}
+.cta:hover {
+	background-color: var(--color-primary-active);
+	color: var(--color-dark);
+}
+.cta:active {
+	background-color: var(--color-secondary);
+	color: var(--color-neutral);
+}
+.primary {
+	color: var(--color-primary);
+}
+/* CORNERS */
+.corner-round {
+	border-radius: var(--corner-round);
+}
+.corner-pill {
+	border-radius: var(--round);
+}
+
 .section-title {
 	margin-bottom: var(--gap-half);
 }
+/* MEDIA QUERIES */
 @media screen and (max-width: 500px) {
 	.container {
 		width: 90%;

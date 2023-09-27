@@ -7,6 +7,25 @@
 aside {
 	padding-block: var(--gap);
 }
+aside#blog-topics .wrapper {
+	padding: var(--gap-third) var(--gap-sixth);
+	gap: var(--gap-sixth);
+}
+#blog-topics .blog-category {
+	background-color: var(--color-transparent-grey);
+	transition: 300ms background-color ease;
+}
+#blog-topics .blog-category:active {
+	background-color: var(--color-neutral);
+}
+#blog-topics #main-footer {
+	font-size: var(--font-secondary);
+	text-align: left;
+	display: none;
+}
+[data-blog-filter='true'] {
+	color: var(--color-primary);
+}
 @media screen and (min-width: 900px) {
 	.two-col {
 		display: flex;
@@ -24,6 +43,9 @@ aside {
 		flex-grow: 1;
 		position: sticky;
 		top: 0;
+	}
+	#blog-topics #main-footer {
+		display: block;
 	}
 }
 @keyframes heart {

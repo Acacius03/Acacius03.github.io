@@ -12,14 +12,10 @@
 <body>
     <nav id="main-nav">
         <div class="container flex-between-center">
-            <button id="brand-logo" data-nav="home">
-                <img src="logo.png" data-nav="home">
-            </button>
-            <ul>
-                <li><button class="nav-active" data-nav="home">Home</button></li>
-                <li><button data-nav="about">About</button></li>
-                <li><button data-nav="contact" class="call-to-action">Contact</button></li>
-            </ul>
+            <button id="brand-logo" data-nav="home"></button>
+            <button data-nav="home" class="nav-active">Home</button>
+            <button data-nav="about">About</button>
+            <button data-nav="contact" class="cta">Contact</button>
             <label id="mobile-nav-toggle" for="toggle-nav">
                 <input id="toggle-nav" type="checkbox" />
             </label>
@@ -34,7 +30,7 @@
                 <button data-nav="about">About</button>
             </li>
             <li>
-                <button data-nav="contact" class="call-to-action">Contact</button>
+                <button data-nav="contact" class="cta">Contact</button>
             </li>
         </ul>
     </nav>

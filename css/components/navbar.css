@@ -3,10 +3,9 @@ nav button.nav-active {
 }
 #main-nav {
 	background-color: var(--color-dark);
-	position: fixed;
+	position: sticky;
 	z-index: 100;
 	top: 0;
-	width: 100%;
 	box-shadow: 0 0 1px 0 var(--color-grey);
 	transition: translate 300ms ease;
 }
@@ -15,19 +14,24 @@ nav button.nav-active {
 }
 #main-nav > .container {
 	height: var(--max-navbar-height);
-	padding-block: 20px;
+	padding: 20px var(--gap-sixth);
 }
 #brand-logo {
+	background-image: url('../../logo.png');
+	background-position: center;
+	background-size: cover;
 	width: 150px;
 	height: 100%;
 }
-#main-nav ul {
-	display: none;
-	gap: var(--gap-third);
-	text-transform: uppercase;
-}
 #main-nav button {
 	border-radius: var(--round);
+	margin-right: var(--gap-third);
+}
+#main-nav button:nth-of-type(2) {
+	margin-left: auto;
+}
+#main-nav button:not(:first-child) {
+	display: none;
 }
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
@@ -95,13 +99,13 @@ body:has(#toggle-nav:checked) #mobile-main-nav {
 	translate: 0 var(--max-navbar-height);
 }
 /* Navigation Buttons */
-nav button.call-to-action.nav-active {
+nav button.cta.nav-active {
 	background-color: var(--color-secondary);
 	color: var(--color-neutral);
 }
 @media screen and (min-width: 600px) {
-	#main-nav ul {
-		display: flex;
+	#main-nav button:not(:first-child) {
+		display: block;
 	}
 	#mobile-nav-toggle,
 	#mobile-main-nav {

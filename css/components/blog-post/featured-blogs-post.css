@@ -9,25 +9,23 @@
 }
 #featured-blogs .post figure::after {
 	content: '';
-	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+	background: linear-gradient(to bottom, transparent, var(--color-dark));
 	position: absolute;
 	inset: 0;
 }
 #featured-blogs .post figcaption {
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 	padding-inline: var(--gap-half);
 	position: absolute;
 	z-index: 1;
 	bottom: 0;
 }
 #featured-blogs .post .blog-tool {
-	padding-block: var(--gap-third);
-	padding-inline: var(--gap-half);
+	padding: var(--gap-third) var(--gap-half);
 	border-bottom: 1px solid var(--color-grey);
 }
 #featured-blogs .post summary {
-	margin-block: var(--gap-sixth);
-	padding-inline: var(--gap);
+	margin: var(--gap-sixth) var(--gap);
 }
 #featured-blogs .post .read-more {
 	font-weight: 700;

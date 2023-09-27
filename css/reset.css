@@ -4,13 +4,16 @@
 	--font-primary: 20px;
 	--font-secondary: 17px;
 	--font-tertiary: 14px;
+
 	/* color */
 	--color-neutral: #fff;
 	--color-dark: #000;
 	--color-grey: #adadad;
 	--color-transparent-grey: #eef1f625;
-	--color-primary: teal;
+	--color-primary: #008080;
+	--color-primary-active: #00ffff;
 	--color-secondary: #af69ef;
+
 	/* spaces */
 	--gap: 30px;
 	--gap-half: 15px;
@@ -28,11 +31,11 @@
 	--max-navbar-height: 80px;
 }
 * {
+	color: inherit;
 	box-sizing: border-box;
 	padding: 0;
 	border: 0;
 	margin: 0;
-	color: inherit;
 }
 a {
 	text-decoration: none;
@@ -57,12 +60,11 @@ button,
 	padding: var(--btn-padding);
 	line-height: 1em;
 	cursor: pointer;
-	transition: 300ms background-color ease-in-out;
+	transition: 300ms ease-in-out;
 }
 button:active,
-.btn:active,
-.call-to-action:active {
-	background-color: rgba(255, 255, 255, 0.3);
+.btn:active {
+	background-color: var(--color-transparent-grey);
 }
 h1,
 h2,

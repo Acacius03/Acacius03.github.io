@@ -8,9 +8,8 @@
 }
 .blog-category {
 	font-family: monospace;
-	line-height: 1.5em;
 	color: var(--color-secondary);
-	padding-block: 0;
+	padding-block: 0.25em;
 }
 .post {
 	display: flex;
@@ -19,7 +18,6 @@
 	overflow: hidden;
 }
 .blog-btn {
-	letter-spacing: 1px;
 	border-radius: var(--round);
 	background-color: var(--color-transparent-grey);
 }

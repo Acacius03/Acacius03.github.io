@@ -6,7 +6,7 @@
 #blog #hero {
 	height: 100vh;
 }
-#blog .container {
+#blog > .container {
 	position: absolute;
 	top: 65vh;
 	left: 50%;
@@ -19,7 +19,7 @@
 	margin-bottom: var(--gap);
 	border-bottom: 1px solid var(--color-grey);
 }
-#blog-header h1 {
+#blog #blog-header h1 {
 	font-size: calc(var(--font-heading) * 2);
 }
 #blog-header small {
@@ -41,3 +41,14 @@
 #blog-context h6 {
 	font-size: var(--font-primary);
 } */
+#blog-category-clear {
+	padding-inline: 0.4em;
+}
+#blog-footer {
+	padding-top: var(--gap);
+	margin-top: var(--gap);
+	border-top: 1px solid var(--color-grey);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
