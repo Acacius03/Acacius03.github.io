@@ -1,10 +1,15 @@
 #featured-blogs .post {
-	--max-img-height: 250px;
+	--min-img-height: 100px;
+	--max-img-height: 150px;
 	flex: 1 1 300px;
 	flex-direction: column;
 }
 #featured-blogs .post figure {
-	height: clamp(200px, calc(150px + 15vw), var(--max-img-height));
+	height: clamp(
+		var(--min-img-height),
+		calc(150px + 15vw),
+		var(--max-img-height)
+	);
 	position: relative;
 }
 #featured-blogs .post figure::after {
@@ -30,4 +35,10 @@
 #featured-blogs .post .read-more {
 	font-weight: 700;
 	margin-top: auto;
+}
+@media screen and (min-width: 500px) {
+	#featured-blogs .post {
+		--min-img-height: 200px;
+		--max-img-height: 250px;
+	}
 }

@@ -2,6 +2,7 @@
 @import url(../components/blog-post/post.css);
 @import url(../components/blog-post/featured-blogs-post.css);
 @import url(../components/blog-post/other-blogs-post.css);
+
 #featured-blogs,
 #other-blogs,
 aside {
@@ -13,6 +14,7 @@ aside#blog-topics .wrapper {
 }
 #blog-topics .blog-category {
 	background-color: var(--color-transparent-grey);
+	color: var(--color-neutral);
 	transition: 300ms background-color ease;
 }
 #blog-topics .blog-category:active {
@@ -23,8 +25,8 @@ aside#blog-topics .wrapper {
 	text-align: left;
 	display: none;
 }
-[data-blog-filter='true'] {
-	color: var(--color-primary);
+#blog-topics .blog-category[data-blog-filter='true'] {
+	background-color: var(--color-secondary);
 }
 @media screen and (min-width: 900px) {
 	.two-col {
@@ -46,16 +48,5 @@ aside#blog-topics .wrapper {
 	}
 	#blog-topics #main-footer {
 		display: block;
-	}
-}
-@keyframes heart {
-	0% {
-		translate: 0 -0;
-	}
-	50% {
-		translate: 0 -15px;
-		scale: 1.2 2;
-	}
-	100% {
 	}
 }

@@ -1,6 +1,6 @@
 #other-blogs .post {
 	margin-bottom: var(--gap-sixth);
-	background: linear-gradient(to right, black, var(--color-transparent-grey));
+	/* background: linear-gradient(to right, black, var(--color-transparent-grey)); */
 }
 #other-blogs .post figure {
 	flex: 0 0 100px;

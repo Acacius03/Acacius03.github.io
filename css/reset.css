@@ -58,7 +58,6 @@ button,
 	background-color: inherit;
 	font-size: var(--font-secondary);
 	padding: var(--btn-padding);
-	line-height: 1em;
 	cursor: pointer;
 	transition: 300ms ease-in-out;
 }

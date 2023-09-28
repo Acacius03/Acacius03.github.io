@@ -6,7 +6,7 @@ export const FeaturedPost = post => {
 			<img src="${post.photo_url}" alt="${post.title}">
 			<figcaption class="blog-header">
 				<h2 class="blog-title primary truncate" data-blog-id=${post.blog_id}>${post.title}</h2>
-				<small class="blog-post-date truncate">${post.created_at}</small>
+				<small class="blog-post-date truncate" data-blog-id=${post.blog_id}>${post.created_at}</small>
 			</figcaption>
 		</figure>
 		<section>

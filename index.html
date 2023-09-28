@@ -12,27 +12,19 @@
 <body>
     <nav id="main-nav">
         <div class="container flex-between-center">
-            <button id="brand-logo" data-nav="home"></button>
-            <button data-nav="home" class="nav-active">Home</button>
-            <button data-nav="about">About</button>
-            <button data-nav="contact" class="cta">Contact</button>
+            <a id="brand-logo" class="corner-pill" data-nav="home"></a>
+            <button data-nav="home" class="nav-active corner-pill">Home</button>
+            <button data-nav="about" class="corner-pill">About</button>
+            <button data-nav="contact" class="cta corner-pill">Contact</button>
             <label id="mobile-nav-toggle" for="toggle-nav">
                 <input id="toggle-nav" type="checkbox" />
             </label>
         </div>
     </nav>
     <nav id="mobile-main-nav">
-        <ul>
-            <li>
-                <button data-nav="home" class="nav-active">Home</button>
-            </li>
-            <li>
-                <button data-nav="about">About</button>
-            </li>
-            <li>
-                <button data-nav="contact" class="cta">Contact</button>
-            </li>
-        </ul>
+        <button data-nav="home" class="nav-active">Home</button>
+        <button data-nav="about">About</button>
+        <button data-nav="contact" class="cta">Contact</button>
     </nav>
     <div id="app"></div>
     <script type="module" src="js/script.js"></script>
