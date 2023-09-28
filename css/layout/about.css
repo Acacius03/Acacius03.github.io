@@ -7,6 +7,7 @@
 #about p {
 	text-indent: 40px;
 	padding-block: var(--gap-half);
+	text-align: justify;
 }
 #about .container {
 	display: flex;

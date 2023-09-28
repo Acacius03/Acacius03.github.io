@@ -154,3 +154,11 @@ navButtons.forEach(btn => {
 	});
 });
 Home();
+
+window.addEventListener('resize', () => {
+	document.getElementById('toggle-nav').checked = false;
+});
+
+window.addEventListener('scroll', () => {
+	document.getElementById('toggle-nav').checked = false;
+});
