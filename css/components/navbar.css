@@ -2,12 +2,11 @@ nav button.nav-active {
 	color: var(--color-secondary);
 }
 #main-nav {
-	background-color: var(--color-dark);
-	position: sticky;
+	position: fixed;
 	z-index: 100;
 	top: 0;
-	box-shadow: 0 0 1px 0 var(--color-grey);
-	transition: translate 300ms ease;
+	width: 100%;
+	transition: 500ms ease;
 }
 #main-nav.hide {
 	translate: 0 -100%;
@@ -17,6 +16,7 @@ nav button.nav-active {
 	padding: 20px var(--gap-sixth);
 }
 #brand-logo {
+	background-color: rgba(0, 0, 0, 0.5);
 	background-image: url('../../logo.png');
 	background-position: center;
 	background-size: cover;
@@ -32,6 +32,12 @@ nav button.nav-active {
 }
 #main-nav button:not(:first-child) {
 	display: none;
+}
+#main-nav button:nth-of-type(2),
+#main-nav button:nth-of-type(3) {
+	font-weight: 700;
+	text-shadow: 0 0 1px var(--color-grey);
+	/* background-color: rgba(0, 0, 0, 0.5); */
 }
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {

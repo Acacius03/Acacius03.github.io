@@ -132,6 +132,14 @@ function filterBlogs(filter) {
 	});
 }
 window.addEventListener('scroll', () => {
+	document.getElementById('toggle-nav').checked = false;
+	if (window.scrollY > 0) {
+		navbar.style.backgroundColor = 'black';
+		navbar.style.boxShadow = '0 0 1px 0 var(--color-grey)';
+	} else {
+		navbar.style.backgroundColor = 'rgba(0,0,0,0)';
+		navbar.style.boxShadow = 'unset';
+	}
 	if (window.scrollY > scrollVal && window.scrollY > 100) {
 		navbar.classList.add('hide');
 	} else {
@@ -159,6 +167,4 @@ window.addEventListener('resize', () => {
 	document.getElementById('toggle-nav').checked = false;
 });
 
-window.addEventListener('scroll', () => {
-	document.getElementById('toggle-nav').checked = false;
-});
+window.addEventListener('scroll', () => {});
