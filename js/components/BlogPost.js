@@ -2,7 +2,7 @@ export const BlogPost = post => {
 	let blogPost = document.createElement('article');
 	blogPost.classList.add('post');
 	blogPost.innerHTML = `
-	<figure data-blog-id=${post.blog_id}>
+	<figure  data-blog-id=${post.blog_id}>
 		<img src="${post.photo_url}" alt="${post.title}">
 	</figure>
 	<div class='blog-body'>

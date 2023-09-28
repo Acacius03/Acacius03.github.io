@@ -1,6 +1,10 @@
 #hero {
 	height: clamp(400px, calc(200px + 35vw), 800px);
 	position: relative;
+	/* Prevent Text Selection */
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 #hero::after {
 	content: '';

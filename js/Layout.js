@@ -79,7 +79,7 @@ export const AboutPage = `
 </section>
 <section id="newsletter">
     <div class="container">
-        <h3>Subscribe to my Newsletter</h3>
+        <h3 class="prevent-select">Subscribe to my Newsletter</h3>
         <form>
             <input type="email" placeholder="Enter Email...">
             <button type="submit" class="cta">Subscribe</button>

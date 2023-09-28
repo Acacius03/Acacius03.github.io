@@ -5,6 +5,13 @@
 #other-blogs .post figure {
 	flex: 0 0 100px;
 	margin-right: var(--gap-third);
+	position: relative;
+}
+#other-blogs .post figure::after {
+	content: '';
+	background-color: transparent;
+	position: absolute;
+	inset: 0;
 }
 #other-blogs .post .blog-body {
 	padding: var(--gap-third);

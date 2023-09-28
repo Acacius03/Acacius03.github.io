@@ -31,6 +31,7 @@
 .blog-btn:active {
 	background-color: var(--color-neutral);
 }
+figure[data-blog-id]:hover,
 h2[data-blog-id]:hover,
 #other-blogs summary[data-blog-id]:hover {
 	text-decoration: underline;
