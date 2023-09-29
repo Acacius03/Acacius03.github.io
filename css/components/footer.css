@@ -1,10 +1,30 @@
 #main-footer {
 	font-size: 1.3em;
-	padding-block: var(--gap);
+	padding-block: var(--gap) var(--gap-third);
 	text-align: center;
 }
-#main-footer nav a:not(:first-of-type):before {
-	content: ' | ';
-	font-size: 1.4em;
-	margin: 10px;
+#main-footer .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.my_social_media_accounts {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+.my_social_media_accounts h3 {
+	flex-basis: 100%;
+}
+
+#main-footer .other {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding-block: 0.5rem;
+	font-size: var(--font-tertiary);
 }

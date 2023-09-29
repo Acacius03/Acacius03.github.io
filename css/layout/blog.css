@@ -34,21 +34,22 @@
 	margin-top: 1.5em;
 	padding-block: var(--gap-third);
 }
-/* #blog-context h2,
-#blog-context h3,
-#blog-context h4,
-#blog-context h5,
-#blog-context h6 {
-	font-size: var(--font-primary);
-} */
-#blog-category-clear {
-	padding-inline: 0.4em;
-}
 #blog-footer {
-	padding-top: var(--gap);
+	padding-top: var(--gap-half);
 	margin-top: var(--gap);
 	border-top: 1px solid var(--color-grey);
-	display: flex;
+}
+#blog-footer .wrapper {
+	gap: 0;
 	justify-content: center;
+}
+#blog-footer p {
+	text-align: center;
+	margin-bottom: var(--gap-sixth);
+}
+#footer_nav {
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	padding-inline: 1rem 3rem;
 }

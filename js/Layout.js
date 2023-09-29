@@ -88,7 +88,27 @@ export const AboutPage = `
 </section>
 <footer id="main-footer">
     <div class="container">
+        <nav class="my_social_media_accounts">
+            <h3>Contact Us!</h3>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-youtube fa-linkedin-youtube"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+        </nav>
         <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
+        <nav class="other">
+            <a href="#">Help</a>
+            <a href="#">Status</a>
+            <a href="#">Writers</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">About</a>
+            <a href="#">Text to speech</a>
+            <a href="#">Teams</a>
+        </nav>
     </div>
 </footer>
 `;
@@ -106,7 +126,32 @@ export const BlogPage = post => `
         </header>
         <section id="blog-context">${post.content_html}</section>
         <footer id="blog-footer">
+            <div id="footer_nav">
+                <nav>
+                    <button data-nav="home">Home</button>
+                    <button data-nav="about">About</button>
+                </nav>
+                <nav class="my_social_media_accounts">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-youtube fa-linkedin-youtube"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                </nav>
+            </div>
             <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
+            <div class="wrapper">
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Help</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Status</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Writers</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Blog</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Careers</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Privacy</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Terms</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">About</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Text to speech</a>
+                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Teams</a>
+            </div>
         </footer>
     </div>
 </Article>
