@@ -27,6 +27,7 @@ aside#blog-topics .wrapper {
 }
 #blog-topics .blog-category[data-blog-filter='true'] {
 	background-color: var(--color-secondary);
+	color: var(--color-dark);
 }
 @media screen and (min-width: 900px) {
 	.two-col {

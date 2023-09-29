@@ -23,6 +23,9 @@ function createBlogPage(id) {
 function switchPage(page, blogPage) {
 	if (page === 'blog_page' && blogPage !== '') {
 		pageLoader.innerHTML = blogPage;
+		navButtons.forEach(btn => {
+			btn.classList.remove('nav-active');
+		});
 	} else if (page == 'home') {
 		Home();
 	} else {
@@ -135,6 +138,27 @@ function filterBlogs(filter) {
 		}
 	});
 }
+Home();
+
+navButtons.forEach(btn => {
+	btn.addEventListener('click', e => {
+		navButtons.forEach(btn => {
+			btn.classList.remove('nav-active');
+			if (
+				btn.getAttribute('data-nav') ===
+				e.target.getAttribute('data-nav')
+			) {
+				btn.classList.add('nav-active');
+			}
+		});
+		switchPage(e.target.getAttribute('data-nav'));
+	});
+});
+
+window.addEventListener('resize', () => {
+	document.getElementById('toggle-nav').checked = false;
+});
+
 window.addEventListener('scroll', () => {
 	document.getElementById('toggle-nav').checked = false;
 	if (window.scrollY > 0) {
@@ -150,23 +174,4 @@ window.addEventListener('scroll', () => {
 		navbar.classList.remove('hide');
 	}
 	scrollVal = window.scrollY;
-});
-navButtons.forEach(btn => {
-	btn.addEventListener('click', e => {
-		navButtons.forEach(btn => {
-			btn.classList.remove('nav-active');
-			if (
-				btn.getAttribute('data-nav') ===
-				e.target.getAttribute('data-nav')
-			) {
-				btn.classList.add('nav-active');
-			}
-		});
-		switchPage(e.target.getAttribute('data-nav'));
-	});
-});
-Home();
-
-window.addEventListener('resize', () => {
-	document.getElementById('toggle-nav').checked = false;
 });

@@ -28,8 +28,8 @@
 	font-size: var(--font-secondary);
 }
 .blog-btn[data-blog-favorite='true'] i {
-	color: var(--color-secondary);
-	animation: heart 1000ms linear;
+	color: #fb3690;
+	animation: heart 1250ms linear;
 }
 .blog-btn:active {
 	background-color: var(--color-neutral);
@@ -44,21 +44,27 @@ h2[data-blog-id]:hover,
 	0% {
 		transform: translateX(0);
 		opacity: 1;
+		scale: 1 1;
 	}
 	30% {
 		transform: translateX(-20px) translateY(-30px) rotate(15deg);
+		scale: 1.4 1.4;
 	}
 	45% {
 		transform: translateX(0) translateY(-60px) rotate(5deg);
+		scale: 1.2 1.2;
 	}
 	60% {
 		transform: translateX(15px) translateY(-90px) rotate(-15deg);
+		scale: 1 1;
 	}
 	90% {
 		transform: translateX(-10px) translateY(-150px) rotate(10deg);
 		opacity: 0;
+		scale: 0.7 0.7;
 	}
 	100% {
 		opacity: 0;
+		scale: 0 0;
 	}
 }
