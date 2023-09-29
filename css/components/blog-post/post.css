@@ -29,7 +29,7 @@
 }
 .blog-btn[data-blog-favorite='true'] i {
 	color: var(--color-secondary);
-	animation: heart 500ms 150ms;
+	animation: heart 1000ms linear;
 }
 .blog-btn:active {
 	background-color: var(--color-neutral);
@@ -42,12 +42,23 @@ h2[data-blog-id]:hover,
 }
 @keyframes heart {
 	0% {
-		translate: 0 -0;
+		transform: translateX(0);
+		opacity: 1;
 	}
-	50% {
-		translate: 0 -15px;
-		scale: 1.2 2;
+	30% {
+		transform: translateX(-20px) translateY(-30px) rotate(15deg);
+	}
+	45% {
+		transform: translateX(0) translateY(-60px) rotate(5deg);
+	}
+	60% {
+		transform: translateX(15px) translateY(-90px) rotate(-15deg);
+	}
+	90% {
+		transform: translateX(-10px) translateY(-150px) rotate(10deg);
+		opacity: 0;
 	}
 	100% {
+		opacity: 0;
 	}
 }

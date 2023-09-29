@@ -3,6 +3,8 @@ import { HomePage, AboutPage, BlogPage } from './Layout.js';
 import { BlogPost } from './components/BlogPost.js';
 import { FeaturedPost } from './components/FeaturedPost.js';
 // Variable Declaration
+const audio = new Audio('../click_audio.mp3');
+audio.volume = 0.5;
 const navbar = document.querySelector('#main-nav');
 const navButtons = document.querySelectorAll('[data-nav]');
 const pageLoader = document.querySelector('#app');
@@ -115,6 +117,8 @@ function Home() {
 				btn.getAttribute('data-blog-favorite') === 'false'
 					? 'true'
 					: 'false';
+			audio.currentTime = 0;
+			audio.play();
 			btn.setAttribute('data-blog-favorite', state);
 		});
 	});

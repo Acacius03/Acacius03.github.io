@@ -103,6 +103,7 @@
 	translate: 0 -10px;
 
 	opacity: 0;
+	visibility: hidden;
 
 	transition: 500ms translate ease, 500ms opacity ease-out;
 }
@@ -137,6 +138,7 @@
 body:has(#toggle-nav:checked) #mobile-main-nav {
 	translate: 0 0;
 	opacity: 1;
+	visibility: visible;
 }
 /* Navigation Buttons */
 @media screen and (min-width: 600px) {
