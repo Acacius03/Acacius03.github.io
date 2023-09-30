@@ -1,15 +1,13 @@
 #main-nav {
-	background-color: var(--color-dark);
-	box-shadow: 0 0 0 1px var(--color-transparent-grey);
 	width: 100%;
 	position: fixed;
 	z-index: 100;
 	top: 0;
 	transition: 500ms ease;
 }
-#main-nav.transparent {
-	background-color: transparent;
-	box-shadow: unset;
+#main-nav.not_transparent {
+	background-color: var(--color-dark);
+	box-shadow: 0 0 0 1px var(--color-transparent-grey);
 }
 #main-nav.hide {
 	translate: 0 -100%;

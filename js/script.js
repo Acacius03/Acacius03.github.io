@@ -10,8 +10,10 @@ let navButtons = document.querySelectorAll('[data-nav]');
 const pageLoader = document.querySelector('#app');
 const categories = [];
 let blogFilters = [];
-let Featured, Other, favBtns, filterBtns;
+let Featured, Other;
 let scrollVal = 0;
+let current_page;
+let home_page_html;
 // Function Declaration
 function createBlogPage(id) {
 	blogPostData.forEach(post => {
@@ -20,7 +22,33 @@ function createBlogPage(id) {
 		}
 	});
 }
+function navBtnAddAction() {
+	navButtons = document.querySelectorAll('[data-nav]');
+	navButtons.forEach(btn => {
+		btn.addEventListener('click', e => {
+			document.getElementById('toggle-nav').checked = false;
+			switchPage(e.target.getAttribute('data-nav'));
+			navButtons.forEach(btn => {
+				btn.classList.remove('nav-active');
+				if (
+					btn.getAttribute('data-nav') ===
+					e.target.getAttribute('data-nav')
+				) {
+					btn.classList.add('nav-active');
+				}
+			});
+		});
+	});
+}
 function switchPage(page, blogPage) {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+	if (current_page === page) {
+		return;
+	}
+	current_page = page;
 	if (page === 'blog_page' && blogPage !== '') {
 		pageLoader.innerHTML = blogPage;
 		navButtons.forEach(btn => {
@@ -31,26 +59,7 @@ function switchPage(page, blogPage) {
 	} else {
 		pageLoader.innerHTML = AboutPage;
 	}
-	navButtons = document.querySelectorAll('[data-nav]');
-	navButtons.forEach(btn => {
-		btn.addEventListener('click', e => {
-			navButtons.forEach(btn => {
-				btn.classList.remove('nav-active');
-				if (
-					btn.getAttribute('data-nav') ===
-					e.target.getAttribute('data-nav')
-				) {
-					btn.classList.add('nav-active');
-				}
-			});
-			document.getElementById('toggle-nav').checked = false;
-			switchPage(e.target.getAttribute('data-nav'));
-		});
-	});
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth',
-	});
+	navBtnAddAction();
 }
 function generatePost() {
 	blogPostData.forEach((post, index) => {
@@ -73,16 +82,23 @@ function generatePost() {
 		`;
 }
 function Home() {
-	pageLoader.innerHTML = HomePage;
-	Featured = document.querySelector('#featured-blogs .blogs-container');
-	Other = document.querySelector('#other-blogs .blogs-container');
-	generatePost();
+	if (Featured && Other) {
+		pageLoader.innerHTML = home_page_html;
+	} else {
+		pageLoader.innerHTML = HomePage;
+		Featured = document.querySelector('#featured-blogs .blogs-container');
+		Other = document.querySelector('#other-blogs .blogs-container');
+		generatePost();
+		home_page_html = pageLoader.innerHTML;
+	}
+	// Blog Page Loader
 	document.querySelectorAll('[data-blog-id]').forEach(btn => {
 		btn.addEventListener('click', e => {
 			createBlogPage(e.target.getAttribute('data-blog-id'));
 		});
 	});
-	filterBtns = document.querySelectorAll('[data-blog-filter]');
+	// Blog Filter
+	const filterBtns = document.querySelectorAll('[data-blog-filter]');
 	filterBtns.forEach(btn => {
 		btn.addEventListener('click', () => {
 			if (btn.innerText === '') {
@@ -126,8 +142,8 @@ function Home() {
 			});
 		});
 	});
-	favBtns = document.querySelectorAll('[data-blog-favorite]');
-	favBtns.forEach(btn => {
+	// Heart Button
+	document.querySelectorAll('[data-blog-favorite]').forEach(btn => {
 		btn.addEventListener('click', () => {
 			const icon = btn.querySelector('i');
 			icon.classList.toggle('fa-regular');
@@ -154,18 +170,15 @@ function filterBlogs(filter) {
 		}
 	});
 }
-switchPage('home');
-
 window.addEventListener('resize', () => {
 	document.getElementById('toggle-nav').checked = false;
 });
-
 window.addEventListener('scroll', () => {
 	document.getElementById('toggle-nav').checked = false;
 	if (window.scrollY > 0) {
-		navbar.classList.remove('transparent');
+		navbar.classList.add('not_transparent');
 	} else {
-		navbar.classList.add('transparent');
+		navbar.classList.remove('not_transparent');
 	}
 	if (window.scrollY > scrollVal && window.scrollY > 100) {
 		navbar.classList.add('hide');
@@ -174,3 +187,4 @@ window.addEventListener('scroll', () => {
 	}
 	scrollVal = window.scrollY;
 });
+switchPage('home');
