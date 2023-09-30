@@ -88,28 +88,28 @@ export const AboutPage = `
 </section>
 <footer id="main-footer">
     <div class="container">
-        <nav class="my_social_media_accounts">
-            <h3>Contact Us!</h3>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-square-x-twitter"></i>
-            <i class="fa-brands fa-youtube fa-linkedin-youtube"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-        </nav>
-        <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
-        <nav class="other">
-            <a href="#">Help</a>
-            <a href="#">Status</a>
-            <a href="#">Writers</a>
-            <a href="#">Blog</a>
-            <a href="#">Careers</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">About</a>
-            <a href="#">Text to speech</a>
-            <a href="#">Teams</a>
-        </nav>
+        <div id="footer_nav">
+            <nav>
+                <button data-nav="home">Home</button>
+                <button data-nav="about">About</button>
+            </nav>
+            <nav class="my_social_media_accounts">
+                <h3>Contact Us!</h3>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube fa-linkedin-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </nav>
+        </div>
     </div>
+    <p id="address">Acacius03 &#9679; 4043 N Ravenswood Ave, Suite 316, Chicago, II, 60613 &#9679; <a href="#">Map</a> &#9679; Main (773) 348,4581 &#9679; Support (773) 353,8314</p>
+    <nav class="other">
+        <a href="#">Privacy</a>|
+        <a href="#">Sitemap</a>|
+        <a href="#">Terms & Conditions</a>|
+        <p>&copy; 2023 Acacius03</p>
+    </nav>
 </footer>
 `;
 
@@ -125,34 +125,30 @@ export const BlogPage = post => `
             <small>${post.created_at}</small>
         </header>
         <section id="blog-context">${post.content_html}</section>
-        <footer id="blog-footer">
+    <footer id="main-footer">
+        <div class="container">
             <div id="footer_nav">
                 <nav>
                     <button data-nav="home">Home</button>
                     <button data-nav="about">About</button>
                 </nav>
                 <nav class="my_social_media_accounts">
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                    <i class="fa-brands fa-youtube fa-linkedin-youtube"></i>
-                    <i class="fa-brands fa-square-instagram"></i>
+                    <h3>Contact Us!</h3>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fa-linkedin-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                 </nav>
             </div>
-            <p>&copy; 2023 Acacius03 | All Rights Reserved.</p>
-            <div class="wrapper">
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Help</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Status</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Writers</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Blog</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Careers</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Privacy</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Terms</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">About</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Text to speech</a>
-                <a class="btn corner-pill" style="padding-block: .25rem;" href="#">Teams</a>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <p id="address">Acacius03 &#9679; 4043 N Ravenswood Ave, Suite 316, Chicago, II, 60613 &#9679; <a href="#">Map</a> &#9679; Main (773) 348,4581 &#9679; Support (773) 353,8314</p>
+        <nav class="other">
+            <a href="#">Privacy</a>|
+            <a href="#">Sitemap</a>|
+            <a href="#">Terms & Conditions</a>|
+            <p>&copy; 2023 Acacius03</p>
+        </nav>
+    </footer>
 </Article>
 `;

@@ -1,9 +1,15 @@
 #main-nav {
+	background-color: var(--color-dark);
+	box-shadow: 0 0 0 1px var(--color-transparent-grey);
 	width: 100%;
 	position: fixed;
 	z-index: 100;
 	top: 0;
 	transition: 500ms ease;
+}
+#main-nav.transparent {
+	background-color: transparent;
+	box-shadow: unset;
 }
 #main-nav.hide {
 	translate: 0 -100%;
@@ -21,9 +27,9 @@
 	height: 100%;
 }
 #main-nav button {
-	display: none;
 	margin-right: var(--gap-third);
 	position: relative;
+	display: none;
 }
 #main-nav button:nth-of-type(1) {
 	margin-left: auto;
@@ -70,7 +76,7 @@
 	width: var(--bar-width);
 	height: var(--bar-height);
 	margin-block: var(--bar-height);
-	background: var(--color-neutral);
+	background-color: var(--color-neutral);
 	transform-origin: right;
 	transition: 500ms ease-in-out;
 }
@@ -90,31 +96,27 @@
 /* Mobile Nav */
 #mobile-main-nav {
 	background-color: var(--color-dark);
-
-	width: 40%;
-	padding: var(--gap-half);
-	border: 1px solid var(--color-transparent-grey);
-	border-radius: var(--corner-round);
+	padding: var(--gap);
 
 	position: fixed;
-	z-index: 98;
+	z-index: 99;
 	top: var(--max-navbar-height);
-	right: 10px;
-	translate: 0 -10px;
-
-	opacity: 0;
-	visibility: hidden;
-
-	transition: 500ms translate ease, 500ms opacity ease-out;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	translate: 100% 0;
+	transition: 500ms translate ease-out;
+}
+body:has(#toggle-nav:checked) #mobile-main-nav {
+	translate: 0 0;
 }
 #mobile-main-nav button {
-	text-align: left;
-
-	width: 100%;
 	background-color: transparent;
+	text-align: left;
+	width: 100%;
 	border-bottom: 1px solid var(--color-transparent-grey);
-	margin-bottom: var(--gap-sixth);
-
+	margin-bottom: var(--gap-third);
+	font-size: var(--font-heading);
 	position: relative;
 }
 #mobile-main-nav button:not(.cta)::before {
@@ -122,24 +124,19 @@
 	background-color: var(--color-secondary);
 
 	width: 0;
-	height: 3px;
+	height: 5px;
 	border-radius: var(--smooth-corner);
 
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	transition: 250ms ease-in;
+	transition: 250ms linear;
 }
 #mobile-main-nav button.nav-active::before {
 	width: 100%;
 }
 #mobile-main-nav button.cta.nav-active {
 	background-color: var(--color-secondary);
-}
-body:has(#toggle-nav:checked) #mobile-main-nav {
-	visibility: visible;
-	translate: 0 0;
-	opacity: 1;
 }
 /* Navigation Buttons */
 @media screen and (min-width: 600px) {
