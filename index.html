@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Acacius | Blogspot</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="logo.png" />
+		<link
+			rel="stylesheet"
+			href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acacius | Blogspot</title>
-    <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-</head>
-
-<body>
-    <nav id="main-nav">
-        <div class="container flex-between-center">
-            <a id="brand-logo" class="corner-pill" data-nav="home"></a>
-            <button data-nav="home" class="nav-active corner-pill">Home</button>
-            <button data-nav="about" class="corner-pill">About</button>
-            <label id="mobile-nav-toggle" for="toggle-nav">
-                <input id="toggle-nav" type="checkbox" />
-            </label>
-        </div>
-    </nav>
-    <nav id="mobile-main-nav">
-        <button data-nav="home" class="nav-active">Home</button>
-        <button data-nav="about">About</button>
-    </nav>
-    <div id="app"></div>
-    <script type="module" src="js/script.js"></script>
-</body>
-
+	<body>
+		<nav id="main-nav">
+			<div class="container flex-between-center">
+				<a
+					id="brand-logo"
+					class="corner-pill"
+					data-nav="home"></a>
+				<button
+					data-nav="home"
+					class="nav-active corner-pill">
+					Home
+				</button>
+				<button
+					data-nav="about"
+					class="corner-pill">
+					About
+				</button>
+				<label
+					id="mobile-nav-toggle"
+					for="toggle-nav">
+					<input
+						id="toggle-nav"
+						type="checkbox" />
+				</label>
+			</div>
+		</nav>
+		<nav id="mobile-main-nav">
+			<button
+				data-nav="home"
+				class="nav-active">
+				Home
+			</button>
+			<button data-nav="about">About</button>
+		</nav>
+		<div id="app"></div>
+		<script
+			type="module"
+			src="js/script.js"></script>
+	</body>
 </html>

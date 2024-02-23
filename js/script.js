@@ -16,19 +16,20 @@ let current_page;
 let home_page_html;
 // Function Declaration
 function createBlogPage(id) {
-	blogPostData.forEach(post => {
+	blogPostData.forEach((post) => {
 		if (post.blog_id == id) {
+			blogFilters = [];
 			switchPage('blog_page', BlogPage(post));
 		}
 	});
 }
 function navBtnAddAction() {
 	navButtons = document.querySelectorAll('[data-nav]');
-	navButtons.forEach(btn => {
-		btn.addEventListener('click', e => {
+	navButtons.forEach((btn) => {
+		btn.addEventListener('click', (e) => {
 			document.getElementById('toggle-nav').checked = false;
 			switchPage(e.target.getAttribute('data-nav'));
-			navButtons.forEach(btn => {
+			navButtons.forEach((btn) => {
 				btn.classList.remove('nav-active');
 				if (
 					btn.getAttribute('data-nav') ===
@@ -51,7 +52,7 @@ function switchPage(page, blogPage) {
 	current_page = page;
 	if (page === 'blog_page' && blogPage !== '') {
 		pageLoader.innerHTML = blogPage;
-		navButtons.forEach(btn => {
+		navButtons.forEach((btn) => {
 			btn.classList.remove('nav-active');
 		});
 	} else if (page == 'home') {
@@ -72,7 +73,7 @@ function generatePost() {
 			Other.appendChild(BlogPost(post));
 		}
 	});
-	categories.sort().forEach(tag => {
+	categories.sort().forEach((tag) => {
 		document.querySelector('#blog-topics .wrapper').innerHTML += `
 		<button class="blog-category corner-pill" data-blog-filter="false">${tag}</button>
 		`;
@@ -82,29 +83,24 @@ function generatePost() {
 		`;
 }
 function Home() {
-	if (Featured && Other) {
-		pageLoader.innerHTML = home_page_html;
-	} else {
-		pageLoader.innerHTML = HomePage;
-		Featured = document.querySelector('#featured-blogs .blogs-container');
-		Other = document.querySelector('#other-blogs .blogs-container');
-		generatePost();
-		home_page_html = pageLoader.innerHTML;
-	}
+	pageLoader.innerHTML = HomePage;
+	Featured = document.querySelector('#featured-blogs .blogs-container');
+	Other = document.querySelector('#other-blogs .blogs-container');
+	generatePost();
 	// Blog Page Loader
-	document.querySelectorAll('[data-blog-id]').forEach(btn => {
-		btn.addEventListener('click', e => {
+	document.querySelectorAll('[data-blog-id]').forEach((btn) => {
+		btn.addEventListener('click', (e) => {
 			createBlogPage(e.target.getAttribute('data-blog-id'));
 		});
 	});
 	// Blog Filter
 	const filterBtns = document.querySelectorAll('[data-blog-filter]');
-	filterBtns.forEach(btn => {
+	filterBtns.forEach((btn) => {
 		btn.addEventListener('click', () => {
 			if (btn.innerText === '') {
 				blogFilters = [];
 				filterBlogs(blogFilters);
-				filterBtns.forEach(btn => {
+				filterBtns.forEach((btn) => {
 					btn.setAttribute('data-blog-filter', 'false');
 				});
 				return;
@@ -119,7 +115,7 @@ function Home() {
 			} else {
 				const arr = blogFilters;
 				blogFilters = [];
-				arr.forEach(a => {
+				arr.forEach((a) => {
 					if (a !== btn.innerText) {
 						blogFilters.push(a);
 					}
@@ -128,9 +124,9 @@ function Home() {
 			filterBlogs(blogFilters);
 		});
 	});
-	document.querySelectorAll('[data-blog-tag]').forEach(btn => {
+	document.querySelectorAll('[data-blog-tag]').forEach((btn) => {
 		btn.addEventListener('click', () => {
-			filterBtns.forEach(filter => {
+			filterBtns.forEach((filter) => {
 				if (
 					btn.innerText === filter.innerText &&
 					!blogFilters.includes(btn.innerText)
@@ -143,7 +139,7 @@ function Home() {
 		});
 	});
 	// Heart Button
-	document.querySelectorAll('[data-blog-favorite]').forEach(btn => {
+	document.querySelectorAll('[data-blog-favorite]').forEach((btn) => {
 		btn.addEventListener('click', () => {
 			const icon = btn.querySelector('i');
 			icon.classList.toggle('fa-regular');
@@ -159,7 +155,7 @@ function Home() {
 	});
 }
 function filterBlogs(filter) {
-	Other.querySelectorAll('article').forEach(blog => {
+	Other.querySelectorAll('article').forEach((blog) => {
 		if (
 			filter.includes(blog.querySelector('[data-blog-tag]').innerText) ||
 			filter.length === 0
